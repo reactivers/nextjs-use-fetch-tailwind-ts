@@ -1,6 +1,7 @@
 FROM cypress/included:10.9.0 as base
 WORKDIR /usr/src/app
 COPY . .
+
 RUN npm i -g yarn
 RUN yarn install --frozen-lockfile --network-timeout 100000
 RUN npm run e2e:headless
