@@ -8,11 +8,11 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     request({
-      endpoint: "/todos"
-    })
-  }, []);
+      endpoint: "/todos",
+    });
+  }, [request]);
 
-  const todos = fetched ? response : []
+  const todos = fetched ? response : [];
 
   return (
     <div className="w-full flex justify-center">
@@ -24,7 +24,8 @@ const Home: NextPage = () => {
           return (
             <div
               className="col-span-1 h-[300px] relative bg-white/10"
-              key={index}>
+              key={index}
+            >
               <div className="absolute bottom-0 left-0 bg-black/40 text-center w-full py-2 text-white text-2xl">
                 {todo.title}
               </div>
