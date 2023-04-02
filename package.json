@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-use-fetch-tailwind-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NextJS, Tailwind, Typescript, Cypress, @reactivers/use-fetch boilerplate",
   "license": "ISC",
   "keywords": [
