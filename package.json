@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@next/env": "^13.2.4",
-    "@reactivers/use-fetch": "^1.0.6",
+    "@reactivers/use-fetch": "^1.0.7",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
     "next": "12.1.6",
