@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-use-fetch-tailwind-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NextJS, Tailwind, Typescript, Cypress, @reactivers/use-fetch boilerplate",
   "license": "ISC",
   "keywords": [
@@ -24,7 +24,7 @@
     "@reactivers/nextjs-use-fetch-tailwind-ts": "./bin/index.js"
   },
   "scripts": {
-    "rimraf": "npx rimraf",
+    "rimraf": "npx -y rimraf",
     "dev": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=development next dev",
     "dev:prod": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=production next dev",
     "build": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=production next build",
@@ -36,13 +36,13 @@
     "export": "npm run build && next export",
     "export:dev": "npm run build:dev && next export",
     "export:test": "npm run build:test && next export",
-    "sitemap": "npx next-sitemap",
+    "sitemap": "next-sitemap",
     "cypress": "NEXT_PUBLIC_APP_ENV=test cypress open",
     "cypress:headless": "NEXT_PUBLIC_APP_ENV=test cypress run",
     "e2e": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress",
     "e2e:headless": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress:headless",
-    "lint": "next lint",
-    "format": "npx prettier --write \"src/**/*.{ts,tsx}\" \"pages/**/*.{ts,tsx}\"",
+    "lint": "eslint . --ext ts --ext tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"pages/**/*.{ts,tsx}\"",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -55,6 +55,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "ts-node": "^10.9.1",
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
@@ -73,7 +74,6 @@
     "next-sitemap": "^3.1.21",
     "prettier": "^2.8.7",
     "start-server-and-test": "^1.14.0",
-    "ts-node": "^10.9.1",
     "typescript": "4.7.4"
   }
 }
