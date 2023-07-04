@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-use-fetch-tailwind-ts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "NextJS, Tailwind, Typescript, Cypress, @reactivers/use-fetch boilerplate",
   "license": "ISC",
   "keywords": [
@@ -34,6 +34,7 @@
     "start:dev": "NEXT_PUBLIC_APP_ENV=development next start",
     "start:test": "NEXT_PUBLIC_APP_ENV=test next start",
     "export": "npm run build && next export",
+    "export:only": "next export",
     "export:dev": "npm run build:dev && next export",
     "export:test": "npm run build:test && next export",
     "sitemap": "next-sitemap",
